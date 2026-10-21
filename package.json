@@ -1,0 +1,40 @@
+{
+  "name": "@dsh-external/dsh-vista-plugin",
+  "version": "1.0.0",
+  "description": "DSH × VISTA (Visual Harness) 物理级高精视觉探针插件：将何恺明团队 VISTA 无损视觉检索与像素采样能力作为 DSH 原生工具暴露给 AI 模型。支持 WSL2 后台自动拉起自愈、HTTP/SSE 与 stdio 双模自适应通信、4 个标准视觉原语（vista_play、vista_inspect、vista_read_pixels、vista_history）、以及自动识图提示词注入。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "keywords": [
+    "dsh",
+    "vista",
+    "visual-harness",
+    "ai-agent",
+    "computer-vision",
+    "pixel-inspection"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2",
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0"
+  },
+  "peerDependenciesMeta": {
+    "cordis": {
+      "optional": true
+    },
+    "schemastery": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  }
+}

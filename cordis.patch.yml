@@ -1,0 +1,7 @@
+# DeepSeek Harness VISTA 视觉探针插件配置补丁
+- insert:
+    - id: vista
+      name: "@dsh-external/dsh-vista-plugin"
+      config:
+        port: 8765
+        autoStart: true
